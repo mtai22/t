@@ -105,4 +105,13 @@ class ReservaForm(ModelForm):
     }
     return render(request, template_name, context)
 
+# consultas
+python manage.py shell
+from aluno.models import Aluno
+models.Reserva.objects.order_by('data')
+Aluno.objects.filter( nome_aluno__icontains= 'Maria')
+
+
+    
+
   
